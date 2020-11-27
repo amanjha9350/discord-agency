@@ -1,0 +1,48 @@
+{
+  "name": "discor-agency",
+  "version": "1.0.0",
+  "description": "Discor agency",
+  "main": "index.js",
+  "scripts": {
+    "server": "lite-server",
+    "dev": "concurrently --kill-others \"npm run dev:css\" \"npm run dev:js\" \"npm run server\" ",
+    "dev:js": "cross-env MODE=development env-cmd .env  webpack --config ./config/webpack.js",
+    "dev:css": "cross-env MODE=development CSS=true env-cmd .env gulp --cwd ./config",
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "cross-env MODE=production env-cmd .env webpack --config ./config/webpack.js",
+    "build:css": "cross-env MODE=production CSS=true env-cmd .env gulp --cwd ./config"
+  },
+  "keywords": [
+    "Discor",
+    "Agency"
+  ],
+  "author": "Dilip Mishra",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.3",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^8.2.5",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "compression-webpack-plugin": "^4.0.0",
+    "concurrently": "^3.6.1",
+    "cross-env": "^5.1.5",
+    "env-cmd": "^8.0.1",
+    "eslint": "^5.13.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-css-purge": "^3.0.8",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.4",
+    "npm": "^6.7.0",
+    "path": "^0.12.7",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.2.3",
+    "webpack-dashboard": "^2.1.0"
+  }
+}
