@@ -1,0 +1,32 @@
+.footer-section {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  .footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-item {
+      a {
+        color: #747C7B;
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .footer-section {
+    padding: 12px 0;
+    background-color: #EBEBEB;
+    .footer-list {
+      &-item {
+        a {
+          font-size: 12px;
+          line-height: 16px;
+          color: #747C7B;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.about-us-wrapper {
+  .container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .about-us-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 872px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+      width: 46%;
+      padding: 16px 16px 16px 44px;
+      position: relative;
+      background-color: $white;
+      margin-bottom: 36px;
+
+      &:nth-child(odd) {
+        margin-right: 60px;
+      }
+
+      .svg-icon {
+        max-width: 44px;
+        max-height: 44px;
+        position: absolute;
+        left: -22px;
+        top: 6px;
+      }
+
+      h4 {
+        color: $primary_text;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      p {
+        color: $primary_text;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .about-us-wrapper {
+    background: url(../dist/images/cloud-left-mob.png) -8px 37% no-repeat,url(../dist/images/cloud-right-mob.png) right 95% no-repeat;
+    background-size: 25% 25%;
+    .about-us-list {
+      li {
+        width: 100%;
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

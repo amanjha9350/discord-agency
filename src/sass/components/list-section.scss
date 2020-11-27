@@ -1,0 +1,106 @@
+.list-section {
+  background: url(../dist/images/cloud-left.png) -10px bottom no-repeat;
+  margin-bottom: 118px;
+  .hero-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    &-item {
+      width: 33%;
+      background-color: $white;
+      padding: 0 16px;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 63px;
+      }
+
+      .list-icon {
+        max-height: 40px;
+        max-width: 50px;
+        position: absolute;
+        left: 16px;
+        top: -19px;
+
+        &.start-button {
+          max-width: 40px;
+        }
+
+        &.worldwide {
+          max-width: 35px;
+        }
+      }
+
+      h3 {
+        margin-top: 37px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .bot-wrapper {
+    h2 {
+      color: $primary_text;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31px;
+      margin-bottom: 46px;
+      margin-top: 0;
+      text-align: center;
+    }
+    .crawsel {
+      .bot-list {
+        display: flex;
+        white-space: nowrap;
+        overflow-x: auto;
+        justify-content: space-between;
+        width: 100%;
+        li {
+          width: 14%;
+          &:not(:last-child) {
+            margin-right: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .list-section {
+    background: url(../dist/images/cloud-left-mob.png) -8px top no-repeat,url(../dist/images/cloud-right-mob.png) right 65% no-repeat;
+    background-size: 25% 25%;
+    margin-bottom: 54px;
+    .hero-list {
+      flex-flow: column;
+      margin-bottom: 40px;
+      &-item {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 58px;
+          margin-right: 0;
+        }
+      }
+    }
+    .bot-wrapper {
+      h2 {
+        margin-bottom: 34px;
+        font-size: 16px;
+        line-height: 21px;
+      }
+      .crawsel .bot-list li {
+        width: auto;
+      }
+    }
+  }
+}

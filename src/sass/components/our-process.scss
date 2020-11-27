@@ -1,0 +1,92 @@
+.our-process-wrapper {
+  background: url(../dist/images/cloud-left.png) left 30% no-repeat,url(../dist/images/cloud-right.png) right 75% no-repeat;
+  .our-process-list {
+    display: flex;
+    flex-flow: column;
+    > li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+      &:nth-child(even) {
+        .item-content-block {
+          order: 2;
+        }
+        .img-block {
+          order: 1;
+        }
+      }
+      .item-content-block {
+        width: 60%;
+        .svg-icon {
+          max-width: 45px;
+          max-height: 45px;
+          margin-bottom: 15px;
+        }
+        h4 {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 600;
+          color: $primary_text;
+          margin-bottom: 15px;
+          margin-top: 0;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          color: $primary_text;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+        }
+        ul {
+          list-style: none;
+          li {
+            position: relative;
+            padding-left: 20px;
+            &::before {
+              content: "-";
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+      .img-block {
+        width: 30%;
+        img {
+          max-width: 250px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .our-process-wrapper {
+    background: url(../dist/images/cloud-left-mob.png) -8px 10% no-repeat,url(../dist/images/cloud-right-mob.png) right 35% no-repeat;
+    background-size: 30%;
+    .our-process-list {
+      >li {
+        flex-flow: column;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+        margin-bottom: 40px;
+        .img-block {
+          order: 1;
+          width: 100%;
+          position: relative;
+          text-align: center;
+        }
+        .item-content-block {
+          order: 2;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './common/reset';
+@import './common/grid';
+@import './common/variables';
+
+@import './components/header.scss';
+@import './common/common.scss';
+@import './components/about-us.scss';
+@import './components/footer.scss';
+
+@media (min-width:768px) {
+  body {
+    background: url(../dist/images/cloud-bg-top.png) top right no-repeat, url(../dist/images/bg-about-us-bottom.png) bottom left no-repeat;
+    min-height: 100vh;
+  }
+}
+
+body {
+  background-color: $bg;
+}

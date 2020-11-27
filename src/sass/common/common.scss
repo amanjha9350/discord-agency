@@ -1,0 +1,27 @@
+.heading-group {
+  padding-top: 64px;
+  max-width: 805px;
+  width: 100%;
+  margin: 0 auto 40px;
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+    color: $primary_text;
+    text-align: center;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+@media (max-width:767px) {
+  .heading-group {
+    padding-top: 43px;
+    margin-bottom: 25px;
+    h1 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+}

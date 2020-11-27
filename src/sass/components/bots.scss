@@ -1,0 +1,110 @@
+.bots-wrapper {
+  .heading-group {
+    h1 {
+      margin-bottom: 37px;
+    }
+    p {
+      text-align: center;
+    }
+    margin-bottom: 88px;
+  }
+  .bots-list {
+    > li {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 100px;
+      }
+      &:nth-child(even) {
+        .item-content {
+          order: 2;
+        }
+        .img-block {
+          order: 1;
+        }
+      }
+      .item-content {
+        color: $primary_text;
+        font-size: 16px;
+        line-height: 24px;
+        width: 50%;
+        h4 {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 600;
+          margin-bottom: 0;
+          margin-top: 0;
+          color: $primary_text;
+          margin-bottom: 15px;
+        }
+        p {
+          margin-bottom: 15px;
+        }
+        ul {
+          list-style: none;
+          li {
+            position: relative;
+            padding-left: 20px;
+            &::before {
+              content: "-";
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+      .img-block {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .svg-img,
+        img {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .bots-wrapper {
+    background: url(../dist/images/cloud-left-mob.png) -8px 25% no-repeat,url(../dist/images/cloud-right-mob.png) right 60% no-repeat;
+    background-size: 30%;
+    .heading-group {
+      margin-bottom: 30px;
+    }
+    .bots-list{
+      >li{
+        flex-flow: column;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+        .item-content {
+          order: 2;
+          width: 100%;
+        }
+        .img-block {
+          order: 1;
+          width: 100%;
+          flex-wrap: wrap;
+          margin-bottom: 15px;
+          &::before {
+            width: 100%;
+            content: attr(data-title);
+            font-size: 18px;
+            line-height: 24px;
+            color: $primary_text;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+          .svg-img, 
+          img {
+            max-width: 95px;
+            max-height: 67px;
+          }
+        }
+      }
+    }
+  }
+}
